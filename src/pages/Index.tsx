@@ -37,6 +37,20 @@ const Index = () => {
 
   const [recentEmployees, setRecentEmployees] = useState<Employee[]>([]);
 
+  const handleSignOut = async () => {
+    try {
+      await axios.post(
+        "http://localhost:5000/api/auth/logout",
+        {},
+        { withCredentials: true }
+      );
+      localStorage.removeItem("token");
+      window.location.href = "/auth"; // ⬅️ redirect to login page
+    } catch (error) {
+      console.error("Logout failed", error);
+    }
+  };
+
   useEffect(() => {
     fetch("http://localhost:5000/api/recent-employees")
       .then((res) => res.json())
@@ -63,6 +77,14 @@ const Index = () => {
                 </p>
               </div>
             </div>
+
+            {/* ✅ Sign Out Button */}
+            <button
+              onClick={handleSignOut}
+              className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+            >
+              Sign Out
+            </button>
           </div>
         </div>
       </header>
