@@ -1,70 +1,91 @@
-# ecommerce-dashboard
+📄 Description
+EmpowerDashboard Frontend is a responsive, interactive admin dashboard interface built with React, TypeScript, Tailwind CSS, and Recharts. It is designed to visualize and manage employee data fetched from a secure backend (Dashboard-Backend).
+This platform provides HR/Admin users with capabilities to add employees, view statistics, and analyze trends through dynamic UI components and real-time charts.
 
-## Project info
+🔗 Backend Repo: Dashboard-Backend
 
+✨ Key Features
+👤 Add New Employees (form with validation and toast notifications)
 
-## How can I edit this code?
+📊 Dashboard with Real-Time Stats:
 
-There are several ways of editing your application.
+Total Employees, Active Today, On Leave
 
+Average Salary, Department Count
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/830951fa-f072-4d4e-b293-c7865ee33218) and start prompting.
+📈 Advanced Analytics:
 
-Changes made via Lovable will be committed automatically to this repo.
+Monthly Hiring Trends
 
+Salary Growth Over Years
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Department Distribution (Pie Chart)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Employee Satisfaction & Performance (Area Charts)
 
-Follow these steps:
+📱 Fully Responsive Layout
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+🎨 Elegant UI using ShadCN + Tailwind CSS + Lucide Icons
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+🔄 Syncs with Backend API for CRUD operations
 
-# Step 3: Install the necessary dependencies.
-npm i
+🧱 Tech Stack
+Technology	Purpose
+React	UI Framework
+TypeScript	Type safety and better tooling
+Tailwind CSS	Utility-first CSS styling
+Recharts	Data Visualization & Analytics
+Lucide Icons	Beautiful, open-source icons
+Axios	HTTP requests to backend API
+ShadCN UI	Beautiful UI components
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+📁 Project Structure
+src/
+│
+├── components/            # Reusable UI components
+├── features/
+│   ├── AddEmployeeForm.tsx      # Form to add new employees
+│   ├── DashboardStats.tsx       # Stat boxes
+│   └── AnalyticsCharts.tsx      # Recharts visualizations
+├── hooks/                # Custom hooks (e.g. toast)
+├── pages/                # Page-level components
+├── App.tsx               # Entry component
+├── index.tsx             # React DOM mount
+📦 Getting Started
+1. Clone the Repository
+git clone https://github.com/malahimaamir/ecommerce-dashboard.git
+cd ecommerce-dashboard
+2. Install Dependencies
+npm install
+3. Set Up Environment
+Make sure your backend (Dashboard-Backend) is running on http://localhost:5000.
+
+If needed, create a .env file for frontend variables (e.g., API base URL).
+
+4. Start the Development Server
 npm run dev
-```
+Visit: http://localhost:5173
 
-**Edit a file directly in GitHub**
+🔗 API Integration
+Method	Endpoint	Purpose
+POST	/api/employees	Add new employee
+GET	/api/employees	Get all employees
+GET	/api/stats	Dashboard statistics
+GET	/api/recent	Recently added employees
+PUT	/api/employees/:id	Edit employee info
+DELETE	/api/employees/:id	Remove employee
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+🖼️ UI Screens
+📇 Add Employee Form
 
-**Use GitHub Codespaces**
+📌 Dashboard Stats Panel
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+📊 Analytics Charts
 
-## What technologies are used for this project?
+📈 Salary & Performance Insights
 
-This project is built with:
+🙋‍♀️ Author
+Malahima Amir
+📧 malahimaamir@gmail.com
+🔗 GitHub: @malahimaamir
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/830951fa-f072-4d4e-b293-c7865ee33218) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
