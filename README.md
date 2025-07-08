@@ -2,7 +2,7 @@
 EmpowerDashboard Frontend is a responsive, interactive admin dashboard interface built with React, TypeScript, Tailwind CSS, and Recharts. It is designed to visualize and manage employee data fetched from a secure backend (Dashboard-Backend).
 This platform provides HR/Admin users with capabilities to add employees, view statistics, and analyze trends through dynamic UI components and real-time charts.
 
-🔗 Backend Repo: Dashboard-Backend
+🔗 Backend Repo: (https://github.com/malahimaamir/Dashboard-Backend)
 
 ✨ Key Features
 👤 Add New Employees (form with validation and toast notifications)
